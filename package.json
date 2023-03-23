@@ -2,16 +2,18 @@
   "name": "mern-infastructure",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "node server.cjs",
-    "dev": "concurrently 'vite' 'node --watch server.cjs'",
+    "start": "node server.js",
+    "dev": "concurrently 'vite' 'node --watch server.js'",
     "react": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.0.2",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -51,6 +51,7 @@ export default defineConfig({
 ## Deployment
 
 setup github repo and connect to cyclic
+after you add .env -> add the variables to cyclic
 
 ### Add startup script
 
@@ -63,3 +64,11 @@ setup github repo and connect to cyclic
 ## IMPORTANT
 
 DO NOT SYNC UP THE CODE!!
+
+## Clean up vite
+
+main.jsx -> remove `index.css`
+main.jsx -> fix import for App after the move
+
+src, public -> belongs to React
+every JS file outside -> belongs to Express 
