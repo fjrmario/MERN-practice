@@ -26,3 +26,40 @@ You need 2 running servers:
 
 * Express -> `node --watch server.js`
 * React -> `npm run dev`
+
+or you `npm install concurrently --save-dev` and change `package.json`
+
+```js
+    "dev": "concurrently 'vite' 'node --watch server.js'",
+```
+
+## Proxy
+
+Vite proxy info at <https://vitejs.dev/config/server-options.html#server-proxy>
+
+```js
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000"
+    } 
+  }
+})
+```
+
+## Deployment
+
+setup github repo and connect to cyclic
+
+### Add startup script
+
+```json
+  "scripts": {
+    "start": "node server.js",
+  }
+```
+
+## IMPORTANT
+
+DO NOT SYNC UP THE CODE!!
